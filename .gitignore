@@ -7,5 +7,5 @@
 **/.classpath
 
 test-servers/*/*
-test-servers/*/eula.txt
-test-servers/*/spigot-*.jar
+!test-servers/*/eula.txt
+!test-servers/*/spigot-*.jar
