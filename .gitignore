@@ -1,0 +1,11 @@
+.metadata/
+.recommenders/
+
+**/*.log
+**/*
+!**/src
+!**/.project
+
+test-servers/*/*
+test-servers/*/eula.txt
+test-servers/*/spigot-*.jar
