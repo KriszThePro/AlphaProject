@@ -2,9 +2,9 @@
 .recommenders/
 
 **/*.log
-**/*/
-!**/src
-!**/.project
+**/.settings
+**/bin
+**/.classpath
 
 test-servers/*/*
 test-servers/*/eula.txt
