@@ -21,7 +21,9 @@ public class SolidPattern implements Pattern
 		{
 			String color = matcher.group(1);
 			if (color == null)
+			{
 				color = matcher.group(2);
+			}
 
 			string = string.replace(matcher.group(), ColorAPI.getColor(color) + "");
 		}
