@@ -32,6 +32,7 @@ public final class ColorAPI
 		}
 
 		string = ChatColor.translateAlternateColorCodes('&', string);
+		
 		return string;
 	}
 
@@ -72,6 +73,7 @@ public final class ColorAPI
 	{
 		String originalString = string;
 		ChatColor[] colors = createGradient(start, end, withoutSpecialChar(string).length());
+		
 		return apply(originalString, colors);
 	}
 
@@ -87,6 +89,7 @@ public final class ColorAPI
 	{
 		String originalString = string;
 		ChatColor[] colors = createRainbow(withoutSpecialChar(string).length(), saturation);
+		
 		return apply(originalString, colors);
 	}
 
@@ -176,6 +179,7 @@ public final class ColorAPI
 		StringBuilder stringBuilder = new StringBuilder();
 		String[] characters = source.split("");
 		int outIndex = 0;
+		
 		for (int i = 0; i < characters.length; i++)
 		{
 			if (characters[i].equals("&") || characters[i].equals("§"))
@@ -191,14 +195,20 @@ public final class ColorAPI
 						specialColors.append(characters[i]);
 						specialColors.append(characters[i + 1]);
 					}
+					
 					i++;
 				}
 				else
+				{
 					stringBuilder.append(colors[outIndex++]).append(specialColors).append(characters[i]);
+				}
 			}
 			else
+			{
 				stringBuilder.append(colors[outIndex++]).append(specialColors).append(characters[i]);
+			}
 		}
+		
 		return stringBuilder.toString();
 	}
 
@@ -213,6 +223,7 @@ public final class ColorAPI
 				workingString = workingString.replace(color, "");
 			}
 		}
+		
 		return workingString;
 	}
 
@@ -304,6 +315,7 @@ public final class ColorAPI
 				nearestDistance = distance;
 			}
 		}
+		
 		return COLORS.get(nearestColor);
 	}
 
