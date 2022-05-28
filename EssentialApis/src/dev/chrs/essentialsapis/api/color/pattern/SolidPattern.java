@@ -1,8 +1,8 @@
-package dev.chrs.color_handler.api.patterns;
+package dev.chrs.essentialsapis.api.color.pattern;
 
 import java.util.regex.Matcher;
 
-import dev.chrs.color_handler.api.ColorAPI;
+import dev.chrs.essentialsapis.api.color.ColorApi;
 
 public class SolidPattern implements Pattern
 {
@@ -25,7 +25,7 @@ public class SolidPattern implements Pattern
 				color = matcher.group(2);
 			}
 
-			string = string.replace(matcher.group(), ColorAPI.getColor(color) + "");
+			string = string.replace(matcher.group(), ColorApi.getColor(color) + "");
 		}
 		
 		return string;

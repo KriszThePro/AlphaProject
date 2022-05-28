@@ -1,0 +1,5 @@
+name: Metin2StyleShopSystem
+version: alpha-0.1
+api-version: 1.18
+main: dev.chrs.metin2styleshopsystem.Plugin
+depends: [ EssentialsApis ]

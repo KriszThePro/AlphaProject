@@ -1,4 +1,4 @@
-package dev.chrs.color_handler.api.patterns;
+package dev.chrs.essentialsapis.api.color.pattern;
 
 public interface Pattern
 {

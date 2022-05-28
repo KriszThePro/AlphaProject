@@ -1,9 +1,9 @@
-package dev.chrs.color_handler.api.patterns;
+package dev.chrs.essentialsapis.api.color.pattern;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.regex.Matcher;
 
-import dev.chrs.color_handler.api.ColorAPI;
+import dev.chrs.essentialsapis.api.color.ColorApi;
 
 public class GradientPattern implements Pattern
 {
@@ -26,7 +26,7 @@ public class GradientPattern implements Pattern
 			string = string.replace
 			(
 					matcher.group(),
-					ColorAPI.color(content, new Color(Integer.parseInt(start, 16)), new Color(Integer.parseInt(end, 16)))
+					ColorApi.color(content, new Color(Integer.parseInt(start, 16)), new Color(Integer.parseInt(end, 16)))
 			);
 		}
 		

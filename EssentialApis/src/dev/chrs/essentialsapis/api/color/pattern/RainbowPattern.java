@@ -1,8 +1,8 @@
-package dev.chrs.color_handler.api.patterns;
+package dev.chrs.essentialsapis.api.color.pattern;
 
 import java.util.regex.Matcher;
 
-import dev.chrs.color_handler.api.ColorAPI;
+import dev.chrs.essentialsapis.api.color.ColorApi;
 
 public class RainbowPattern implements Pattern
 {
@@ -21,7 +21,7 @@ public class RainbowPattern implements Pattern
 		{
 			String saturation = matcher.group(1);
 			String content = matcher.group(2);
-			string = string.replace(matcher.group(), ColorAPI.rainbow(content, Float.parseFloat(saturation)));
+			string = string.replace(matcher.group(), ColorApi.rainbow(content, Float.parseFloat(saturation)));
 		}
 		
 		return string;

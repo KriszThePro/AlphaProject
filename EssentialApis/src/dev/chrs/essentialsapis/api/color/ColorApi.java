@@ -1,4 +1,4 @@
-package dev.chrs.color_handler.api;
+package dev.chrs.essentialsapis.api.color;
 
 import java.awt.Color;
 import java.util.Arrays;
@@ -9,13 +9,10 @@ import java.util.stream.Collectors;
 
 import org.bukkit.Bukkit;
 
-import dev.chrs.color_handler.api.patterns.GradientPattern;
-import dev.chrs.color_handler.api.patterns.Pattern;
-import dev.chrs.color_handler.api.patterns.RainbowPattern;
-import dev.chrs.color_handler.api.patterns.SolidPattern;
+import dev.chrs.essentialsapis.api.color.pattern.*;
 import net.md_5.bungee.api.ChatColor;
 
-public final class ColorAPI
+public final class ColorApi
 {
 	/**
 	 * Processes a string to add color to it.
@@ -45,7 +42,7 @@ public final class ColorAPI
 	 */
 	public static List<String> process(List<String> strings)
 	{
-		return strings.stream().map(ColorAPI::process).collect(Collectors.toList());
+		return strings.stream().map(ColorApi::process).collect(Collectors.toList());
 	}
 
 	/**
@@ -119,6 +116,8 @@ public final class ColorAPI
 		return string.replaceAll("<#[0-9A-F]{6}>|[&§][a-f0-9lnokm]|<[/]?[A-Z]{5,8}(:[0-9A-F]{6})?[0-9]*>", "");
 	}
 	
+	/////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////
 	
 	/**
 	 * The current version of the server in the a form of a major version.
