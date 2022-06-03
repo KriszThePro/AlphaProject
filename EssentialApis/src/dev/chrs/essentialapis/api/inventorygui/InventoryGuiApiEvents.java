@@ -1,4 +1,4 @@
-package dev.chrs.essentialsapis.api.inventorygui;
+package dev.chrs.essentialapis.api.inventorygui;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

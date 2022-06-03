@@ -1,8 +1,8 @@
-package dev.chrs.essentialsapis.api.color.pattern;
+package dev.chrs.essentialapis.api.color.pattern;
 
 import java.util.regex.Matcher;
 
-import dev.chrs.essentialsapis.api.color.ColorApi;
+import dev.chrs.essentialapis.api.color.ColorApi;
 
 public class RainbowPattern implements Pattern
 {

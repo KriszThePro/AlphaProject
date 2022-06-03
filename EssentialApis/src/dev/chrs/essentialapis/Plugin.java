@@ -1,12 +1,12 @@
-package dev.chrs.essentialsapis;
+package dev.chrs.essentialapis;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import dev.chrs.essentialsapis.api.color.ColorApi;
-import dev.chrs.essentialsapis.api.inventorygui.InventoryGuiApiEvents;
+import dev.chrs.essentialapis.api.color.ColorApi;
+import dev.chrs.essentialapis.api.inventorygui.InventoryGuiApiEvents;
 
 public class Plugin extends JavaPlugin
 {

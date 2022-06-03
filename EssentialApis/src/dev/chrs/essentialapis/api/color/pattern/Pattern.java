@@ -1,4 +1,4 @@
-package dev.chrs.essentialsapis.api.color.pattern;
+package dev.chrs.essentialapis.api.color.pattern;
 
 public interface Pattern
 {

@@ -1,4 +1,4 @@
-package dev.chrs.essentialsapis.api.inventorygui;
+package dev.chrs.essentialapis.api.inventorygui;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,8 +11,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import dev.chrs.essentialsapis.api.color.ColorApi;
-import dev.chrs.essentialsapis.exception.*;
+import dev.chrs.essentialapis.api.color.ColorApi;
 
 public class InventoryGuiApi implements Listener
 {

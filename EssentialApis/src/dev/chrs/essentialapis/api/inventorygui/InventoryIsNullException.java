@@ -1,4 +1,4 @@
-package dev.chrs.essentialsapis.exception;
+package dev.chrs.essentialapis.api.inventorygui;
 
 public class InventoryIsNullException extends Exception
 {

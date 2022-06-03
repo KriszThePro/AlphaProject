@@ -1,4 +1,4 @@
-package dev.chrs.essentialsapis.api.color;
+package dev.chrs.essentialapis.api.color;
 
 import java.awt.Color;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import org.bukkit.Bukkit;
 
-import dev.chrs.essentialsapis.api.color.pattern.*;
+import dev.chrs.essentialapis.api.color.pattern.*;
 import net.md_5.bungee.api.ChatColor;
 
 public final class ColorApi
