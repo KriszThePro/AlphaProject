@@ -1,4 +1,4 @@
-package dev.chrs.metin2styleshopsystem;
+package dev.chrs.throwablelightsources;
 
 import java.util.HashMap;
 import java.util.Map.Entry;
@@ -15,17 +15,11 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import dev.chrs.essentialapis.api.color.ColorApi;
-import dev.chrs.essentialapis.api.inventorygui.IllegalInventorySizeException;
-import dev.chrs.essentialapis.api.inventorygui.InventoryGuiApi;
-import dev.chrs.essentialapis.api.inventorygui.InventoryIsNullException;
-import dev.chrs.essentialapis.api.inventorygui.PlayerAlreadyHasGUIException;
-import dev.chrs.essentialapis.api.inventorygui.PlayerIsNullException;
 
 public class Plugin extends JavaPlugin implements Listener
 {
@@ -40,39 +34,12 @@ public class Plugin extends JavaPlugin implements Listener
 		
 		loadEvents();
 
-		_console.sendMessage(ColorApi.process("&a[Metin2StyleShopSystem] &7Loaded."));
+		_console.sendMessage(ColorApi.process("&a[ThrowableLightSources] &7Loaded."));
 	}
 	
 	public static Plugin getInstance()
 	{
 		return _instance;
-	}
-
-	@EventHandler
-	public void onJoin(final PlayerJoinEvent event) throws PlayerAlreadyHasGUIException, IllegalInventorySizeException
-	{
-		final Player player = event.getPlayer();
-
-		InventoryGuiApi.createInventory(player, 36);
-
-		new BukkitRunnable()
-		{
-			int counter = 0;
-
-			@Override
-			public void run()
-			{
-				try
-				{
-					InventoryGuiApi.updateTitle(player, counter + "");
-				}
-				catch (PlayerIsNullException | InventoryIsNullException ex)
-				{
-					cancel();
-				}
-				counter++;
-			}
-		}.runTaskTimer(this, 40L, 5L);
 	}
 
 	/////////////////////////////////////////////////////////
