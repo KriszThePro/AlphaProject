@@ -13,7 +13,7 @@ public class InventoryGuiApiEvents implements Listener
 	{
 		final Player player = (Player) event.getPlayer();
 
-		InventoryGuiApi.removeFromList(player);
+		InventoryGuiApi.removeInstance(player);
 	}
 
 	@EventHandler
@@ -21,6 +21,6 @@ public class InventoryGuiApiEvents implements Listener
 	{
 		final Player player = (Player) event.getPlayer();
 
-		InventoryGuiApi.removeFromList(player);
+		InventoryGuiApi.removeInstance(player);
 	}
 }

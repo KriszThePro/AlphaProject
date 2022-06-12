@@ -1,5 +1,8 @@
 package dev.chrs.metin2styleshopsystem;
 
+import static dev.chrs.metin2styleshopsystem.util.DependencyUtil.requestDependencies;
+import static dev.chrs.essentialapis.util.LoggerUtil.info;
+
 import java.util.HashMap;
 import java.util.Map.Entry;
 
@@ -8,7 +11,6 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
-import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -33,14 +35,10 @@ public class Plugin extends JavaPlugin implements Listener
 	public void onEnable()
 	{
 		_instance = this;
-		
-		DependencyUtil.requestDependencies();
-		
-		_console = Bukkit.getConsoleSender();
-		
+		requestDependencies();
 		loadEvents();
 
-		_console.sendMessage(ColorApi.process("&a[Metin2StyleShopSystem] &7Loaded."));
+		info(ColorApi.process("&a[Metin2StyleShopSystem] &7Loaded."));
 	}
 	
 	public static Plugin getInstance()
@@ -53,7 +51,7 @@ public class Plugin extends JavaPlugin implements Listener
 	{
 		final Player player = event.getPlayer();
 
-		InventoryGuiApi.createInventory(player, 36);
+		InventoryGuiApi.createGui(player, 36);
 
 		new BukkitRunnable()
 		{
@@ -90,7 +88,6 @@ public class Plugin extends JavaPlugin implements Listener
 	/////////////////////////////////////////////////////////
 
 	private static Plugin _instance;
-	private ConsoleCommandSender _console;
 	private Listener[] _listenerClasses = { this };
 
 

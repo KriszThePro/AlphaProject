@@ -1,7 +1,7 @@
 package dev.chrs.essentialapis;
 
-import org.bukkit.Bukkit;
-import org.bukkit.command.ConsoleCommandSender;
+import static dev.chrs.essentialapis.util.LoggerUtil.info;
+
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,11 +14,9 @@ public class Plugin extends JavaPlugin
 	public void onEnable()
 	{
 		_instance = this;
-		_console = Bukkit.getConsoleSender();
-		
 		loadEvents();
 
-		_console.sendMessage(ColorApi.process("&a[EssentialApis] &7Loaded."));
+		info(ColorApi.process("&a[EssentialApis] &7Loaded."));
 	}
 
 	public static Plugin getInstance()
@@ -41,6 +39,5 @@ public class Plugin extends JavaPlugin
 	/////////////////////////////////////////////////////////
 
 	private static Plugin _instance;
-	private ConsoleCommandSender _console;
 	private Listener[] _listenerClasses = { new InventoryGuiApiEvents() };
 }
