@@ -1,25 +1,25 @@
 package dev.chrs.essentialapis.util;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.bukkit.command.ConsoleCommandSender;
 
 import dev.chrs.essentialapis.Plugin;
+import dev.chrs.essentialapis.api.color.ColorApi;
 
 public class LoggerUtil
 {
 	public static void info(String message)
 	{
-		_logger.log(Level.INFO, message);
+		_sender.sendMessage(ColorApi.process("&a" + message));
 	}
 	
 	public static void warn(String message)
 	{
-		_logger.log(Level.WARNING, message);
+		_sender.sendMessage(ColorApi.process("&e" + message));
 	}
 	
 	public static void error(String message)
 	{
-		_logger.log(Level.SEVERE, message);
+		_sender.sendMessage(ColorApi.process("&4" + message));
 	}
 	
 	/////////////////////////////////////////////////////////
@@ -33,5 +33,5 @@ public class LoggerUtil
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	
-	private static final Logger _logger = Plugin.getInstance().getLogger();
+	private static final ConsoleCommandSender _sender = Plugin.getInstance().getServer().getConsoleSender();
 }

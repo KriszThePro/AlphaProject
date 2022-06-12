@@ -3,3 +3,6 @@ version: alpha-0.1
 api-version: 1.18
 main: dev.chrs.throwablelightsources.Plugin
 softdepend: [ EssentialApis ]
+
+command:
+    gai
