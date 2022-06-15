@@ -1,11 +1,18 @@
+# ignored basic workspace folders
 .metadata/
 .recommenders/
 
+# ignored basic project files and folders
 **/*.log
-**/.settings
-**/bin
+**/bin/
 **/.classpath
+**/.settings
 
-test-servers/*/*
-!test-servers/*/eula.txt
-!test-servers/*/spigot-*.jar
+# ignored projects
+AgentServerFile/
+
+# ignored test server files and folders
+_testServers/*/*
+# excluded test server files
+!_testServers/*/eula.txt
+!_testServers/*/spigot-*.jar

@@ -11,7 +11,7 @@ public class giveActionItem implements CommandExecutor
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args)
 	{
 		if(sender instanceof Player player)
-		{
+		{		
 			player.getInventory().addItem(Plugin.getActionItem());
 		}
 			

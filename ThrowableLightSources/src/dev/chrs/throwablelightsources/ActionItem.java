@@ -1,22 +1,28 @@
 package dev.chrs.throwablelightsources;
 
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import dev.chrs.throwablelightsources.config.ConfigYml;
 
-public abstract class ActionItem
+public class ActionItem
 {
 	public ActionItem()
 	{
 		_actionItem = new ItemStack(ConfigYml.material);
-		_actionItem.getItemMeta().setDisplayName(ConfigYml.displayname);
-		_actionItem.getItemMeta().setLore(ConfigYml.lore.size() > 0 ? ConfigYml.lore : null);
+		
+		ItemMeta itemMeta = _actionItem.getItemMeta();
+		
+		itemMeta.setDisplayName(ConfigYml.displayname);
+		itemMeta.setLore(ConfigYml.lore.size() > 0 ? ConfigYml.lore : null);
+		
+		_actionItem.setItemMeta(itemMeta);
 	}
 	
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	
-	public static ItemStack getActionItem()
+	public ItemStack getActionItem()
 	{
 		return _actionItem;
 	}
@@ -24,5 +30,5 @@ public abstract class ActionItem
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	
-	private static ItemStack _actionItem;
+	private ItemStack _actionItem;
 }

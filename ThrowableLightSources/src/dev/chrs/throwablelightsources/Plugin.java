@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import dev.chrs.throwablelightsources.config.ConfigYml;
 import dev.chrs.throwablelightsources.listener.LeftClickListener;
+import dev.chrs.throwablelightsources.listener.RightClickListener;
 import dev.chrs.throwablelightsources.util.DependencyUtil;
 import dev.chrs.throwablelightsources.util.LoggerUtil;
 
@@ -22,7 +23,7 @@ public class Plugin extends JavaPlugin implements Listener
 		loadConfigs();
 		loadEvents();
 		
-		_actionItem = ActionItem.getActionItem();
+		_actionItem = new ActionItem().getActionItem();
 		
 		getCommand("gai").setExecutor(new giveActionItem());
 
@@ -64,6 +65,6 @@ public class Plugin extends JavaPlugin implements Listener
 	/////////////////////////////////////////////////////////
 
 	private static Plugin _instance;
-	private Listener[] _listenerClasses = { new LeftClickListener() };
+	private Listener[] _listenerClasses = { new LeftClickListener(), new RightClickListener() };
 	private static ItemStack _actionItem;
 }
