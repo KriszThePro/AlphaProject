@@ -9,8 +9,8 @@
 **/.settings
 
 # ignored projects
-AgentServerFile/
-AgentServerFileProcessChecker/
+#AgentServerFile/
+#AgentServerFileProcessChecker/
 
 # ignored test server files and folders
 _testServers/*/*
