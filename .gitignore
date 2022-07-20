@@ -16,4 +16,4 @@ AgentServerFileProcessChecker/
 _testServers/*/*
 # excluded test server files
 !_testServers/*/eula.txt
-!_testServers/*/spigot-*.jar
+!_testServers/*/server.jar
