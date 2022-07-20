@@ -28,7 +28,6 @@ public class Plugin extends JavaPlugin implements Listener
 		getCommand("gai").setExecutor(new giveActionItem());
 
 		LoggerUtil.info("[ThrowableLightSources] &7Loaded.");
-		LoggerUtil.warn(ConfigYml.displayname);
 	}
 
 	public static Plugin getInstance()

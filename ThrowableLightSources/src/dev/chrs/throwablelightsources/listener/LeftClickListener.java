@@ -70,8 +70,9 @@ public class LeftClickListener implements Listener
 						cancel();
 					}
 
+					final Material actionItem = Material.TORCH;
 					final Block currentLocationBlock = currentLocation.getBlock();
-					for (Entry<Block, BlockFace> blockWithRelativeFacing : getScannedSurroundingBlocksWithRelativeFacing(currentLocation, Material.LANTERN).entrySet())
+					for (Entry<Block, BlockFace> blockWithRelativeFacing : getScannedSurroundingBlocksWithRelativeFacing(currentLocation, actionItem).entrySet())
 					{
 						final Block block = blockWithRelativeFacing.getKey();
 						final BlockFace blockFace = blockWithRelativeFacing.getValue();
@@ -79,7 +80,7 @@ public class LeftClickListener implements Listener
 						if (currentLocationBlock.getType() == Material.AIR && !ForbiddenMaterialsUtil.isForbiddenMaterial(block.getType()))
 						{
 							droppedItem.remove();
-							setBlockDirection(currentLocationBlock, blockFace, Material.LANTERN);
+							setBlockDirection(currentLocationBlock, blockFace, actionItem);
 
 							cancel();
 						}

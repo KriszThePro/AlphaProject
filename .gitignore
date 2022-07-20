@@ -10,6 +10,7 @@
 
 # ignored projects
 AgentServerFile/
+AgentServerFileProcessChecker/
 
 # ignored test server files and folders
 _testServers/*/*

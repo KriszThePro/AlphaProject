@@ -1,12 +1,11 @@
 package dev.chrs.essentialapis;
 
-import static dev.chrs.essentialapis.util.LoggerUtil.info;
-
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import dev.chrs.essentialapis.api.color.ColorApi;
 import dev.chrs.essentialapis.api.inventorygui.InventoryGuiApiEvents;
+import dev.chrs.essentialapis.util.LoggerUtil;
 
 public class Plugin extends JavaPlugin
 {
@@ -16,7 +15,7 @@ public class Plugin extends JavaPlugin
 		_instance = this;
 		loadEvents();
 
-		info(ColorApi.process("&a[EssentialApis] &7Loaded."));
+		LoggerUtil.info(ColorApi.process("&a[EssentialApis] &7Loaded."));
 	}
 
 	public static Plugin getInstance()
